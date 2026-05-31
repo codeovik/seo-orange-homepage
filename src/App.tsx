@@ -406,6 +406,63 @@ export default function App() {
           </div>
         </section>
 
+        {/* Google Certifications / Certified Expertise Section */}
+        <section className="bg-white py-24 px-6 md:px-12 border-b border-slate-100 relative overflow-hidden" id="certifications-section">
+          {/* Subtle warm decorative glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-orange-50/20 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div className="max-w-7xl mx-auto space-y-12 relative z-10">
+            {/* Centered Headers */}
+            <div className="text-center space-y-4 max-w-3xl mx-auto">
+              <p className="text-xs font-mono font-bold tracking-widest text-[#eb5a0c] uppercase">
+                Industry Certification
+              </p>
+              <h2 className="text-3xl md:text-5xl font-sans font-extrabold tracking-tight text-slate-900 leading-tight">
+                Certified Expertise That Supports <span className="font-serif italic font-black text-[#eb5a0c]/55 tracking-wide antialiased">Better Results</span>
+              </h2>
+              <p className="text-base md:text-lg text-slate-500 font-normal leading-relaxed max-w-2xl mx-auto">
+                From analytics to advertising, we work with trusted platforms that power measurable growth.
+              </p>
+            </div>
+
+            {/* Logo grid - exactly 3 logos per row on desktop (lg grid-cols-3) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+              {[
+                { src: "https://ovikbiswas.wordpress.com/wp-content/uploads/2026/05/seo-company-shopping-cert-02-175x80.png_202605311240.png", alt: "Google Shopping Certified Status" },
+                { src: "https://ovikbiswas.wordpress.com/wp-content/uploads/2026/05/seo-company-serach-cert-02-175x80.png_202605311242.png", alt: "Google Search Certified Status" },
+                { src: "https://ovikbiswas.wordpress.com/wp-content/uploads/2026/05/seo-company-analytics-cert-02-175x80.png_202605311242.png", alt: "Google Analytics Certified Status" },
+                { src: "https://ovikbiswas.wordpress.com/wp-content/uploads/2026/05/seo-company-adwords-cert-02-175x80.png_202605311242.png", alt: "Google AdWords Certified Status" },
+                { src: "https://ovikbiswas.wordpress.com/wp-content/uploads/2026/05/seo-company-display-cert-02-175x80.png_202605311243.png", alt: "Google Display Certified Status" },
+                { src: "https://ovikbiswas.wordpress.com/wp-content/uploads/2026/05/seo-company-youtube-cert-02-175x80.png_202605311243.png", alt: "Google YouTube Certified Status" }
+              ].map((cert, index) => (
+                <div 
+                  key={index} 
+                  className="p-4 flex items-center justify-center h-24 transition-transform duration-300 hover:scale-105"
+                >
+                  <img 
+                    src={cert.src} 
+                    alt={cert.alt} 
+                    className="max-h-20 w-auto object-contain select-none transition-opacity duration-300"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Added CTA button at the end of certifications-section */}
+            <div className="pt-6 flex justify-center">
+              <button
+                onClick={() => setAuditModalOpen(true)}
+                className="flex items-center gap-2 h-11 px-5 font-sans text-sm font-normal bg-[#eb5a0c] text-white rounded-lg hover:bg-[#d64f0a] transition-all cursor-pointer shadow-sm"
+              >
+                <span>Book Your Free Growth Call</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#ffffff" className="shrink-0"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
+              </button>
+            </div>
+
+          </div>
+        </section>
+
         {/* Proactive Problems Section representing the attached layout design inspiration */}
         <section className="bg-slate-50/50 py-24 px-6 md:px-12 border-t border-b border-slate-100 relative" id="problems-section">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
